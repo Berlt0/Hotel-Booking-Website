@@ -1,5 +1,8 @@
 import React, { useState } from 'react'
+import '@fortawesome/fontawesome-free/css/all.min.css';
 import '../App.css';
+
+
 
 const LandingPage = () => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -104,14 +107,76 @@ const LandingPage = () => {
         <div className="v-line"></div>
 
         <div className='div2'>
-          <h3>Hotel's Location</h3>
           
+           <h3 className="hotel-location">Hotel's Location</h3>
 
+            <div className="location-line">
+
+              <div style={{display: 'flex', alignItems: 'center', gap: '10px',marginLeft: '100px '}}>
+                <i className="fa fa-map-marker fa-xl" aria-hidden="true" style={{ color: 'white' }}></i>
+                <p className="address">Address</p>
+              </div>
+              <div>
+                <p className="hotel-address">Purok 5 Navalan Tukuran, 7019 Zamboanga City, Philippines</p>
+              </div>
+              
+            </div>
+            
+            <h3 className="hotel-contact">Hotel's Contact</h3>
+
+            <div className="contact-line">
+
+            {/* PHONE SECTION */}
+            <div className="c1 contact-item">
+              <div className="contact-row">
+                <div className="contact-label">
+                  <i className="fa fa-phone fa-xl" aria-hidden="true" style={{ color: 'white' }}></i>
+                  <p className="phone">Phone</p>
+                </div>
+                <p className="phone-number">+63 992 23440 676</p>
+              </div>
+            </div>
+
+            {/* EMAIL SECTION */}
+            <div className="c2 contact-item">
+              <div className="contact-row">
+                <div className="contact-label">
+                  <i className="fa fa-envelope fa-xl" aria-hidden="true" style={{ color: 'white' }}></i>
+                  <p className="email">Email</p>
+                </div>
+                <p className="email-add">laprimadecaza@gmail.com</p>
+              </div>
+            </div>
+
+          </div>
         </div>
-        
-
-
       </div>
+        
+    
+      <div className="map-container">
+        <iframe
+          title="Hotel Location"
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d829.6893996540834!2d123.4901207168621!3d7.93293229456645!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x32543fd7f4d66321%3A0x889fbc574b3b3f19!2sH%C2%B2O%20FishKeeper!5e1!3m2!1sen!2sph!4v1752219330657!5m2!1sen!2sph"
+          width="100%"
+          height="100%"
+          style={{ border: 0 }}
+          allowFullScreen=""
+          loading="lazy"
+          referrerPolicy="no-referrer-when-downgrade"
+        ></iframe>
+      </div>
+
+  
+
+
+
+
+
+
+
+
+      
+      
 
     </div>
   )
